@@ -68,7 +68,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       height: 45,
                     ),
                     TextfieldPrimaryComponent(
-                      textHint: labels['email'] ?? '',
+                      textHint: labels['label.email'] ?? '',
                       controller: _emailController,
                     ),
                     SizedBox(

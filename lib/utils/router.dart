@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:netspot/custom/circle_custom.dart';
 import 'package:netspot/utils/utils.dart';
 import '../../app/choose_language_screen.dart';
 import '../../app/clock_screen.dart';
@@ -20,8 +19,7 @@ class RouteGenerator {
         return animateRoute(SignInScreen());
       case '/success':
         return animateRoute(SuccessScreen());
-      case '/test':
-        return animateRoute(MyPainter());
+   
       default:
         // PAGE NOT FOUND
         return animateRoute(UnknownRoutePage());

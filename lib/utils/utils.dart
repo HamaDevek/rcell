@@ -1,4 +1,8 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
+import 'dart:ui' as ui;
+import 'dart:typed_data';
+import 'package:flutter/services.dart';
 
 PageRouteBuilder animateRoute(screen) {
   return PageRouteBuilder(
@@ -24,3 +28,14 @@ PageRouteBuilder animateRoute(screen) {
     transitionDuration: Duration(milliseconds: 500),
   );
 }
+
+Future<ui.Image> loadUiImage(String imageAssetPath) async {
+  final ByteData data = await rootBundle.load(imageAssetPath);
+  final Completer<ui.Image> completer = Completer();
+  ui.decodeImageFromList(Uint8List.view(data.buffer), (ui.Image img) {
+    return completer.complete(img);
+  });
+  return completer.future;
+}
+
+

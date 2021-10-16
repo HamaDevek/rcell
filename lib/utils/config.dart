@@ -1,4 +1,4 @@
 class ConfigApp {
-  static String root = '/test';
+  static String root = '/';
   static String appName = 'RCELL';
 }
