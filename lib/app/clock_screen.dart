@@ -16,9 +16,9 @@ class ClockScreen extends StatefulWidget {
 
 class _ClockScreenState extends State<ClockScreen> {
   double? fromSecond, fromHour, fromMinute;
-  bool isSecondReverce = false;
-  bool isHourReverce = false;
-  bool isMinuteReverce = false;
+  bool isSecondReverse = false;
+  bool isHourReverse = false;
+  bool isMinuteReverse = false;
   @override
   void initState() {
     super.initState();
@@ -30,9 +30,9 @@ class _ClockScreenState extends State<ClockScreen> {
         min: 3,
         max: 9);
 
-    isSecondReverce = now.second > 30;
-    isMinuteReverce = now.minute > 30;
-    isHourReverce = now.hour > 3;
+    isSecondReverse = now.second > 30;
+    isMinuteReverse = now.minute > 30;
+    isHourReverse = (now.hour < 12 ? now.hour : now.hour - 12) > 3;
 
     fromSecond = s / 60;
     fromMinute = m / 60;
@@ -50,11 +50,11 @@ class _ClockScreenState extends State<ClockScreen> {
               child: Stack(
                 children: [
                   HalfCircleClockCustom(
-                    duration: Duration(seconds: 12),
+                    duration: Duration(hours: 12),
                     radius: MediaQuery.of(context).size.width / 2,
                     imageName: 'assets/images/hr.png',
                     from: fromHour,
-                    // isReverce: isHourReverce,
+                    isReverse: isHourReverse,
                   ),
                   HalfCircleClockCustom(
                     duration: Duration(minutes: 60),
@@ -62,7 +62,7 @@ class _ClockScreenState extends State<ClockScreen> {
                     imageName: 'assets/images/min.png',
                     isShowLine: false,
                     from: fromMinute,
-                    isReverce: isMinuteReverce,
+                    isReverse: isMinuteReverse,
                   ),
                   HalfCircleClockCustom(
                     duration: Duration(seconds: 60),
@@ -70,7 +70,7 @@ class _ClockScreenState extends State<ClockScreen> {
                     imageName: 'assets/images/sec.png',
                     isShowLine: true,
                     from: fromSecond,
-                    isReverce: isSecondReverce,
+                    isReverse: isSecondReverse,
                   ),
                 ],
               ),

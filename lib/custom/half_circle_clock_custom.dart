@@ -11,7 +11,7 @@ class HalfCircleClockCustom extends StatefulWidget {
   final radius;
   final imageName;
   final isShowLine;
-  final isReverce;
+  final isReverse;
   final from;
 
   const HalfCircleClockCustom(
@@ -19,7 +19,7 @@ class HalfCircleClockCustom extends StatefulWidget {
       required this.duration,
       required this.radius,
       this.isShowLine = true,
-      this.isReverce = false,
+      this.isReverse = false,
       required this.imageName,
       this.from = 0})
       : super(key: key);
@@ -57,7 +57,7 @@ class _HalfCircleClockCustomState extends State<HalfCircleClockCustom>
           controller!.forward();
         }
       });
-    if (widget.isReverce) {
+    if (widget.isReverse) {
       controller!.reverse(from: widget.from);
     } else {
       controller!.forward(from: widget.from);
