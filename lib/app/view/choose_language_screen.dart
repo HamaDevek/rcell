@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:netspot/components/icon_component.dart';
-import 'package:netspot/components/button_primary_component.dart';
+import 'package:netspot/app/components/button_primary_component.dart';
+import 'package:netspot/app/components/footer_component.dart';
+import 'package:netspot/app/components/icon_component.dart';
 import 'package:netspot/languages/lables.dart';
-import '../../components/footer_component.dart';
 
 class ChooseLanguageScreen extends StatefulWidget {
   const ChooseLanguageScreen({Key? key}) : super(key: key);

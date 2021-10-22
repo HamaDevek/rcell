@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:netspot/app/components/footer_component.dart';
 import 'package:netspot/languages/lables.dart';
-import '../../components/footer_component.dart';
 
 class SuccessScreen extends StatefulWidget {
   const SuccessScreen({Key? key}) : super(key: key);

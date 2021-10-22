@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:netspot/app/view/choose_language_screen.dart';
+import 'package:netspot/app/view/clock_screen.dart';
+import 'package:netspot/app/view/signin_screen.dart';
+import 'package:netspot/app/view/success_screen.dart';
+import 'package:netspot/app/view/unknowen_route_page.dart';
 import 'package:netspot/utils/utils.dart';
-import '../../app/choose_language_screen.dart';
-import '../../app/clock_screen.dart';
-import '../../app/signin_screen.dart';
-import '../../app/success_screen.dart';
-import '../../app/unknowen_route_page.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -19,7 +19,6 @@ class RouteGenerator {
         return animateRoute(SignInScreen());
       case '/success':
         return animateRoute(SuccessScreen());
-   
       default:
         // PAGE NOT FOUND
         return animateRoute(UnknownRoutePage());

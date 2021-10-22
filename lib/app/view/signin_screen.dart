@@ -1,12 +1,12 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:netspot/components/button_secondary_component.dart';
-import 'package:netspot/components/icon_component.dart';
-import 'package:netspot/components/button_primary_component.dart';
-import 'package:netspot/components/textfiled_primary_component.dart';
+import 'package:netspot/app/components/button_primary_component.dart';
+import 'package:netspot/app/components/button_secondary_component.dart';
+import 'package:netspot/app/components/footer_component.dart';
+import 'package:netspot/app/components/icon_component.dart';
+import 'package:netspot/app/components/textfiled_primary_component.dart';
 import 'package:netspot/languages/lables.dart';
-import '../../components/footer_component.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);

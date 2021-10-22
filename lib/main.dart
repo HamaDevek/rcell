@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:netspot/services/theme_service.dart';
 import '../theme/theme_modes.dart';
 import '../utils/config.dart';
-import '../utils/router.dart';
+import 'routes/router.dart';
 
 main() {
   runApp(MyApp());

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netspot/components/custom_text_button_component.dart';
+import 'package:netspot/app/components/custom_text_button_component.dart';
 import 'package:netspot/languages/lables.dart';
 
 class FooterComponent extends StatelessWidget {

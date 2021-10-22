@@ -1,11 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:netspot/components/icon_component.dart';
+import 'package:netspot/app/components/button_primary_component.dart';
+import 'package:netspot/app/components/footer_component.dart';
+import 'package:netspot/app/components/icon_component.dart';
 import 'package:netspot/custom/half_circle_clock_custom.dart';
 import 'package:netspot/languages/lables.dart';
-import '../../components/footer_component.dart';
-import '../../components/button_primary_component.dart';
 
 class ClockScreen extends StatefulWidget {
   const ClockScreen({Key? key}) : super(key: key);
